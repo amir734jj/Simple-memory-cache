@@ -15,3 +15,9 @@ cache.Set("some key", "some value", TimeSpan.FromMinutes(60));
 // value == "some value"
 var value = cache.get("some key");
 ```
+
+## Operation time complexities:
+- Initialization: `O(n)`
+- Read: `O(1)`
+- Write: `O(1)` + persistant `Write` call in a different thread`
+- Delete: `O(1)` + persistant `Delete` call in a different thread`
