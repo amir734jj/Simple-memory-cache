@@ -1,9 +1,11 @@
 # Simple-memory-cache
 
+Simple memory cache with an option to add persistency. To add persistancy, create a class that implements `IBasicCrud` and pass it to the `SetRefreshInterval` builder method.
+
 ```csharp
 var cache = MemoryCacheBuilder.New()
     // Optional
-    // .SetPersistancy( instance of class that extends IBasicCrud )
+    // .SetPersistancy( instance of class that implements IBasicCrud )
     .SetRefreshInterval(TimeSpan.FromSeconds(10))
     .Build();
 
