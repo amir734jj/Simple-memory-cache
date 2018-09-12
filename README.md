@@ -21,3 +21,6 @@ var value = cache.get("some key");
 - Read: `O(1)`
 - Write: `O(1)` + persistant `Write` call in a different thread`
 - Delete: `O(1)` + persistant `Delete` call in a different thread`
+
+## TODOs:
+- Store number of access times of a record as well and implement a "swap" based on that
